@@ -16,7 +16,7 @@ $ ./src/reduce.py --input_paths outputs/geoTwitter*.lang --output_path=reduced.l
 ```
 
 ```
-$ ./src/reduce.py --input_paths outputs/geoTwitter*.country --output_path=reduced.country
+$ ./src/reduce.py --input_paths outputs/geoTwitter*.country --output_path=reduced.country_2
 ```
 
 # Visualize the Data
