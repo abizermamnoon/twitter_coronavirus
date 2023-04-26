@@ -4,7 +4,7 @@
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_path',required=True)
-parser.add_argument('--output_folder',default='outputs')
+parser.add_argument('--output_folder',default='outputs_1')
 args = parser.parse_args()
 
 # imports
@@ -82,10 +82,10 @@ except FileExistsError:
     pass
 output_path_base = os.path.join(args.output_folder,os.path.basename(args.input_path))
 
-#output_path_lang = output_path_base+'.lang'
-#print('saving',output_path_lang)
-#with open(output_path_lang,'w') as f:
-#    f.write(json.dumps(counter_lang))
+output_path_lang = output_path_base+'.lang'
+print('saving',output_path_lang)
+with open(output_path_lang,'w') as f:
+    f.write(json.dumps(counter_lang))
     
 output_path_country = output_path_base+'.country'
 print('saving',output_path_country)

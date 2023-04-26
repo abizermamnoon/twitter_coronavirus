@@ -1,4 +1,4 @@
 #!/bin/sh
 for file in '/data/Twitter dataset/'geoTwitter20-*.zip; do
-	"$(nohup ./src/map.py --input_path="$file" &)"
+	$(./src/map.py --input_path="$file") &
 done

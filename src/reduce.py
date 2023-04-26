@@ -15,10 +15,13 @@ from collections import Counter,defaultdict
 # load each of the input paths
 total = defaultdict(lambda: Counter())
 for path in args.input_paths:
-    with open(path) as f:
-        tmp = json.load(f)
-        for k in tmp:
-            total[k] += tmp[k]
+    try:
+        with open(path) as f:
+            tmp = json.load(f)
+            for k in tmp:
+                total[k] += tmp[k]
+    except json.decoder.JSONDecodeError:
+        print(f"Skipping invalid JSON file: {path}")
 
 # write the output path
 with open(args.output_path,'w') as f:

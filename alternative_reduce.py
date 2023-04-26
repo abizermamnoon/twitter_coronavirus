@@ -16,7 +16,7 @@ import os
 import json
 from collections import Counter,defaultdict
 
-file_paths = glob.glob('outputs/geoTwitter*.country')
+file_paths = glob.glob('outputs_1/geoTwitter*.country')
 results = {}
 
 # load each of the input paths

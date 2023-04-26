@@ -58,7 +58,7 @@ plt.rcParams['font.family'] = 'NanumGothic'
 ## Set the title of the plot
 #plt.title("#Coronavirus Occurrences in each Language on Twitter")
 
-plt.savefig("covid_country_ko")
+plt.savefig("covid_country_ko.png")
 
 # Display the plot
 plt.show()
